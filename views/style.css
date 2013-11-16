@@ -1,24 +1,52 @@
 body {
-	background-color: #F6F1E3;	
+	background:url(home_page_background.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 #log-panel {
-	text-align: right;	
+	text-align: right;
+	color: white;
+}
+
+#log-panel , a{
+	text-decoration: none;
+	color: white;
 }
 
 #content {
 	margin: 0 auto; 
 	padding: 1em;
-	width: 50%;
+	width: 75%;
+}
+
+#content, h1 {
+	text-align: center;
+	color: white
 }
 
 #buttons {
-	background-color: white;
-	padding: 3em;
+	padding: 1em;
+	border-style:solid;
+	border-width: 1px;
+	border-radius: 7px;
 }
 
+#buttons ,input{
+	display: inline-block;
+	margin-left: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 20px;
+	border-radius: 5px;
+}
+
+
+
 #mentionslegales {
-	position: absolute;
+	position: fixed;
+	bottom: 10px;
+	left: 50px;
 	font-size: 10pt;	
 }

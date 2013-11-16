@@ -1,0 +1,64 @@
+<!doctype html>
+
+  <head>
+    <title>Livathing</title>
+    <meta charset="utf-8" /> 
+    <script src="geolocation.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+
+    	$(document).on("ready", function() {
+    		// Géolocalisation
+    		if (navigator.geolocation) {
+			  navigator.geolocation.getCurrentPosition(success, error);
+			} else {
+			  error('not supported');
+			}
+			
+    		// Attachement des événements aux boutons
+    		$('#signup').on('click', function() { 
+    			alert('soon'); 
+    		});
+    		
+    		$('#login').on('click', function() {
+    			alert('soon');
+    		});
+    		
+    		$('#go').on('click', function() {
+    			alert('Evenements de ' + $('#when').val() + ' -- ' + $('#ou').val() + ' -- ' + $('#activity').val() );
+    		});
+    		
+    	});
+    </script> 
+    <link rel="stylesheet" type="text/css" href="style.css" /> 
+  </head>
+
+  <body>
+	
+	<!-- Cartouche de navigation -->
+	<nav id="log-panel">
+	<a href="#" id="signup">sign up</a> - <a href="#" id="login">log in</a>
+	</nav>
+
+	<!-- Input de recherche-->
+	<div id="content">
+		<h1>Que voulez-vous faire ?</h1><br />
+		<div id="buttons">
+			<input type="text" id="activity" placeholder="Ex: Booling"/> <input type="date" id="when" /> <span id="location"></span><input type="text" id="ou" placeholder="Changer la localisation..." /> <input type="submit" id="go" value="On y va !"/>
+		</div>
+		
+		
+		
+		<div id="resultats">
+		
+		</div>
+	</div>
+
+	<!-- Mentions légales -->
+	<div id="mentionslegales">
+		( c ) - Livathing '13
+	</div>
+  </body>
+
+</html>
