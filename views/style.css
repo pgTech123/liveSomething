@@ -19,5 +19,6 @@ body {
 }
 
 #mentionslegales {
+	position: absolute;
 	font-size: 10pt;	
 }
