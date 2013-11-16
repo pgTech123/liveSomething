@@ -3,22 +3,52 @@
   <head>
     <title>Livathing</title>
     <meta charset="utf-8" /> 
-    <script src="geolocation.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="mustache.js"></script>
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="categories.js"></script>
+    <script src="geolocation.js"></script>
+
+
+    <script id="catTpl" type="text/template">
+	    {{#categorie}}  
+	    	<img class="categorie" src="./img/{{.}}.jpg" /> 
+		{{/categorie}}
+    </script>
+
+
+
     <script type="text/javascript">
 
     	$(document).on("ready", function() {
     		// Géolocalisation
     		if (navigator.geolocation) {
 			  navigator.geolocation.getCurrentPosition(success, error);
-			} else {
+			} 
+			else {
 			  error('not supported');
 			}
+
+
+    		$('#activity').css('color', 'grey');
+    		$('#activity').on('blur', function() {
+    			if ( $('#activity').val() == "" ) {
+    				$('#activity').val('Ex: Chasser, magasiner ...');
+    				$('#activity').css('color', 'grey');
+    			}
+    		});
+
+			// Catégories
+			loadCategories();
 			
     		// Attachement des événements aux boutons
     		$('#signup').on('click', function() { 
     			alert('soon'); 
+    		});
+
+    		$('#activity').on('click', function() {
+    			$('#activity').css('color', 'black');
+    			$('#activity').val('');
     		});
     		
     		$('#login').on('click', function() {
@@ -43,15 +73,20 @@
 
 	<!-- Input de recherche-->
 	<div id="content">
-		<h1>Que voulez-vous faire ?</h1><br />
+		<h1>J'ai envie de ?</h1><br />
 		<div id="buttons">
-			<input type="text" id="activity" placeholder="Ex: Booling"/> <input type="date" id="when" /> <span id="location"></span><input type="text" id="ou" placeholder="Changer la localisation..." /> <input type="submit" id="go" value="On y va !"/>
+			<input type="text" id="activity" value="Ex: Chasser, magasiner ..."/> <input type="date" id="when" /> <span id="location"></span><input type="text" id="ou" value="Changer la localisation?" /> <input type="submit" id="go" value="On y va !"/>
 		</div>
 		
 		
 		
 		<div id="resultats">
 		
+		</div>
+
+		<div id="categories"> 
+		    	<img class="categorie" src="http://lorempixum.com/200/150" /> 
+		    	<img class="categorie" src="http://lorempixum.com/200/150" /> 
 		</div>
 	</div>
 

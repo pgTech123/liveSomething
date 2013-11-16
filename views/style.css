@@ -42,6 +42,14 @@ body {
 	border-radius: 5px;
 }
 
+#categories {
+	width: 100%;
+}
+
+.categorie {
+	margin-left: 5em;
+}
+
 
 
 #mentionslegales {

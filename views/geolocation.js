@@ -12,7 +12,7 @@
 	      if (results[1]) { 
 	      	// Récupérer uniquement le nom de la ville
 	      	var city_name;
-	      	console.log('kikoo ' + results[1].address_components.length);
+	      	
 	      	for ( var i=0; i < results[1].address_components.length ; ++i)  {
 	      		console.log(results[1].address_components.length);
 	      		if ( results[1].address_components[i].types.indexOf('locality') > -1 ) {
