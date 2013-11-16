@@ -13,6 +13,11 @@ body {
 	min-height: 150px;
 }
 
+#buttons input[type=text], input[type=date] {
+	padding: 1em;
+	height: 20px;
+}
+
 #content {
 	margin: 0 auto; 
 	padding: 1em;
