@@ -1,3 +1,23 @@
 body {
-	background-color: pink;	
+	background-color: #F6F1E3;	
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#log-panel {
+	text-align: right;	
+}
+
+#content {
+	margin: 0 auto; 
+	padding: 1em;
+	width: 50%;
+}
+
+#buttons {
+	background-color: white;
+	padding: 3em;
+}
+
+#mentionslegales {
+	font-size: 10pt;	
 }
