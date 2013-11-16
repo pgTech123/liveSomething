@@ -1,3 +1,45 @@
-<html>
+<!doctype html>
+
+  <head>
+    <title>Live Something !</title>
+    <meta charset="utf-8" /> 
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+    	$(document).on("ready", function() {
+    		// Attachement des événements
+    		$('#signup').on('click', function() { 
+    			alert('soon'); 
+    		});
+    		
+    		$('#login').on('click', function() {
+    			alert('soon');
+    		});
+    		
+    		$('#go').on('click', function() {
+    			alert('soon');
+    		});
+    		
+    	});
+    </script> 
+    <link rel="stylesheet" type="text/css" href="style.css" /> 
+  </head>
+
+  <body>
+	
+	<!-- Cartouche de navigation -->
+	<nav>
+	<a href="#" id="signup">sign up</a> - <a href="#" id="login">log in</a>
+	</nav>
+
+	<!-- Input de recherche-->
+	<div id="content">
+		<h1>Qu'est-ce que tu veux faire ?</h1><br />
+		<input type="text" id="activity" /> <input type="date" id="when" /> <input type="text" id="ou" /> <input type="submit" id="go" value="On y va !"/>
+	</div>
+
+	<div id="mentionslegales">
+		( c ) - LiveSomething '13
+	</div>
+  </body>
 
 </html>
