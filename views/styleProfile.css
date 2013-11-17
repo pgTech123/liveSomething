@@ -1,0 +1,240 @@
+body{
+	margin: auto;
+
+	background:url(home_page_background.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	
+	font-family: "Microsoft Tai Le",Helvetica,Arial,sans-serif;
+}
+
+#logo img{
+	margin-left: 70px;
+	max-height: 150px;
+	
+	position: relative;
+	bottom: -70px;
+}
+
+#pensee{
+	position: relative;
+	top: -20px;
+	margin-left: 325px;
+	margin-right: 200px;
+	text-align: center;
+	color: white;
+}
+
+#sideGauche{
+	float: left;
+	top:0px;
+	width: 230px;
+	margin-left: 70px;
+}
+
+#infoProfile{
+	border:solid;
+	border-width: 2px;
+	border-radius: 5px;
+	border-color:gray;
+	background: white;
+}
+
+#photo  img{
+	position: relative;
+	top: 10px;
+	right: -5px;
+	
+	max-width: 175px;
+	max-height: 175px;
+	
+	min-height: 175px;
+	min-width: 175px;
+	
+	border: solid;
+	border-color: gray;
+	border-width:1px;
+	margin-left: 20px;
+	margin-top:0px;
+}
+
+#boutonFavori{
+	position:relative;
+	top:20;
+}
+
+#boutonFavori img{
+	max-width: 32px;
+	max-height: 32px;
+}
+
+#nom{
+	text-align: center;
+	font-size: 14px;
+}
+
+
+.bouton_agenda {
+	margin-bottom: 15px;
+	margin-top: 30px;
+
+	-moz-box-shadow:inset 0px 1px 0px 0px #999999;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #999999;
+	box-shadow:inset 0px 1px 0px 0px #999999;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff8808), color-stop(1, #f0b17a) );
+	background:-moz-linear-gradient( center top, #ff8808 5%, #f0b17a 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8808', endColorstr='#f0b17a');
+	background-color:#ff8808;
+	-webkit-border-top-left-radius:6px;
+	-moz-border-radius-topleft:6px;
+	border-top-left-radius:6px;
+	-webkit-border-top-right-radius:6px;
+	-moz-border-radius-topright:6px;
+	border-top-right-radius:6px;
+	-webkit-border-bottom-right-radius:6px;
+	-moz-border-radius-bottomright:6px;
+	border-bottom-right-radius:6px;
+	-webkit-border-bottom-left-radius:6px;
+	-moz-border-radius-bottomleft:6px;
+	border-bottom-left-radius:6px;
+	text-indent:0;
+	border:1px solid #808080;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:30px;
+	line-height:30px;
+	width: 230px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #141214;
+}
+.bouton_agenda:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f0b17a), color-stop(1, #ff8808) );
+	background:-moz-linear-gradient( center top, #f0b17a 5%, #ff8808 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0b17a', endColorstr='#ff8808');
+	background-color:#f0b17a;
+}
+.bouton_agenda:active {
+	position:relative;
+	top:1px;
+}
+
+.bouton_proposerActivite {
+	margin-bottom: 15px;
+
+	-moz-box-shadow:inset 0px 1px 0px 0px #999999;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #999999;
+	box-shadow:inset 0px 1px 0px 0px #999999;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff8808), color-stop(1, #f0b17a) );
+	background:-moz-linear-gradient( center top, #ff8808 5%, #f0b17a 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8808', endColorstr='#f0b17a');
+	background-color:#ff8808;
+	-webkit-border-top-left-radius:6px;
+	-moz-border-radius-topleft:6px;
+	border-top-left-radius:6px;
+	-webkit-border-top-right-radius:6px;
+	-moz-border-radius-topright:6px;
+	border-top-right-radius:6px;
+	-webkit-border-bottom-right-radius:6px;
+	-moz-border-radius-bottomright:6px;
+	border-bottom-right-radius:6px;
+	-webkit-border-bottom-left-radius:6px;
+	-moz-border-radius-bottomleft:6px;
+	border-bottom-left-radius:6px;
+	text-indent:0;
+	border:1px solid #808080;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:30px;
+	line-height:30px;
+	width: 230px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #141214;
+}
+.bouton_proposerActivite:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f0b17a), color-stop(1, #ff8808) );
+	background:-moz-linear-gradient( center top, #f0b17a 5%, #ff8808 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0b17a', endColorstr='#ff8808');
+	background-color:#f0b17a;
+}
+.bouton_proposerActivite:active {
+	position:relative;
+	top:1px;
+}
+
+#pitonConnection:hover{
+	background:url('img/point_connecter.png');
+}
+
+
+#bloc_interets{
+	padding: 20px;
+	height: 400px;
+
+	margin-left: 325px;
+	margin-right: 200px;
+	
+	border: dotted;
+	border-color: white;
+	border-radius: 20px;
+	border-width:5px;
+}
+
+#bloc_interets h3{
+	text-align: center;
+	color: white;
+	font-size: 22px;
+}
+
+
+#menuInterets, a{
+	display: table-row;
+}
+
+#menuInterets img{
+	max-width: 50px;
+	max-height:50px;
+}
+
+
+
+
+#aPropos{
+	margin-top: 20px;
+	margin-left: 70px;
+	width: 1005px;
+	
+	border: solid;
+	border-radius: 5px;
+	border-color: orange;
+	border-width:3px;
+	
+	background: white;
+}
+
+#aProposStrong{
+	font-weight:bold;
+}
+
+#publicite:
+{
+	margin-right: 2px;
+	width: 25px;
+	height: 500px;
+	
+	border: solid;
+	border-radius: 5px;
+	border-color: black;
+	
+	background-color: white;
+
+}
