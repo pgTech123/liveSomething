@@ -24,9 +24,9 @@
             <p class="event">
             <b><span class="icon" style="text-shadow: 1px 2px black; color:white;">z</span></b> {{name}} <br />
             <b><span class="icon" style="color: #FF7C71">@</span></b> {{location}}<br />
-            <b><span class="icon" style="">g</span></b> {{attendees}}<br />
+            <b><span class="icon" style="">g</span></b> {{{attendees}}}<br />
             <b><span class="icon" style="color: #C41F1F">\</span></b> Aujourd hui à ...<br />
-            <a href="#">Go ! </a>
+            <a href="monProfil.html">Go ! </a>
             </p>
         {{/event}}  
     </script>
@@ -48,7 +48,9 @@
             });
 
              $('.exactivity').on('click', function() {
-                $('#activity').val($(this).html());
+                var keyword = $(this).html();
+                $('#activity').val(keyword);
+                    searchEvent(keyword, lat, long); 
              });
 
     		$('#activity').css('color', 'grey');
@@ -94,7 +96,7 @@
       <div id="logo">
     	<!-- Input de recherche-->
         <div id="infos">
-            Salut SWS ! <br />
+            Hey <a href="monProfil.html">Jerome</a> ! <br />
             <a href="#">Quitter ?</a>
         </div>
     	<div id="content"> 
