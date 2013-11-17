@@ -4,33 +4,13 @@
     <title>livathing login</title>
     <meta charset="utf-8" /> 
 	
-	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<SCRIPT LANGUAGE="JavaScript" type="text/javascript" src="profileJS.js"></SCRIPT>
-	
-		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript">
-
-    	$(document).on("ready", function() {
-	    		// Attachement des événements aux boutons
-    		$('#signup').on('click', function() { 
-    			alert('soon'); 
-    		});
-    		
-    		$('#login').on('click', function() {
-    			alert('soon');
-    		});
-    		
-    	});
-    </script> 
-
-    <link rel="stylesheet" type="text/css" href="styleProfile.css" /> 
+    <link rel="stylesheet" type="text/css" href="styleMonProfil.css" /> 
   </head>
   
   <body>
 	<header id="logo">
 		<a href="http://www.livathing.com/views"><img src="img/logo.png" alt="Logo Livathing"/></a>
-		<h1 id="pensee">« Quelqu'un pour une soirée cinéma? »</h1>
+		<h1 id="pensee">« Don't waste any moment »</h1>
 	</header>
 
 	<div id="page">
@@ -42,25 +22,29 @@
 				</div>
 				
 				<div id="photo">
-					<img src="img/photoProfile1.jpg" alt="Photo de profile"/>
+					<img src="img/photoProfileJerome.jpg" alt="Photo de profile"/>
 				</div>
 				
 				
 				
 				<div id="nom">
-					<h2><img src="img/point_connecter.png"  id="pitonConnection" alt="Photo de profile"/>Alicia Beauregard</h2>
-					<h3>Sherbrooke</br>25 ans</h3>
+					<h2><img src="img/point_connecter.png"  id="pitonConnection" alt="Photo de profile"/>Jerome Blanchet Brisson(SWS)</h2>
+					<h3>Sherbrooke</br>31 ans</h3>
 				</div>
 		
 				
 			</div>
 			
 			<div id="boutonAgenda">
-					<a href="#" class="bouton_agenda">Inviter à un évènement</a>
+					<a href="#" class="bouton_agenda">Mon agenda</a>
 			</div>
 		
 			<div id="proposerActivite">
-				<a href="#" class="bouton_proposerActivite">Discuter </a>
+				<a href="#" class="bouton_proposerActivite">Créer un évènement </a>
+			</div>
+			
+			<div id="parametres">
+				<a href="#" class="bouton_parametres">Modifier votre profil</a>
 			</div>
 			
 		</section>
@@ -68,15 +52,27 @@
 			
 		<div id="bloc_interets">
 
-			<h3>Intérêts de Alicia Beauregard</h3>
+			<h3>Vos intérêts</h3>
+			<a href="#" id="ajouterInterets">(Ajouter des intérêts) <img src="img/plus.png" alt="plus"/></a>
 			
 			<section id="descriptionInterets">
 				<table> 
+					<div id="groupeTitre">
+						<tr id="titresCategories">
+							<td>Sports</br></td>
+							<td>Restaurants</br></td>
+							<td>Culture</br></td>
+							<td>Plein-air</br></td>
+							<td>Éducation</br></td>
+							<td>Social</br></td>
+						</tr>
+					</div>
+					
 					<tr id = "menuInterets">
 						<td><a href="#" id="sports"><img src="img/ballon.png" alt="Sports" onClick="addSports();"/></a></td>
 						<td><a href="#" id="restauration"><img src="img/restaurant_food.png" alt="Restauration"/></a></td>
 						<td><a href="#" id="culture"><img src="img/socialLogo.png" alt="Culture"/></a></td>
-						<td><a href="#" id="pleinair"><img src="img/randonnee.png" alt="Plein air"/></a></td>
+						<td><a href="#" id="pleinair"><img src="img/dehors.png" alt="Plein air"/></a></td>
 						<td><a href="#" id="educatif"><img src="img/book.png" alt="Educatif"/></a></td>
 						<td><a href="#" id="social"><img src="img/peuple.png" alt="Social"/></a></td>
 					</tr>
@@ -85,7 +81,7 @@
 						<td>Soccer</td>
 						<td>Da Toni</td>
 						<td>Cinéma</td>
-						<td>Chasse</td>
+						<td>Randonnée</td>
 						<td>Cours de guitare</td>
 						<td>PaintBall</td>
 					</tr>
@@ -110,15 +106,10 @@
 				</table>
 			</section>	
 			
-			<section id="interetsCommuns">
-				<h2>Intérêts communs</h2>
-				<p>- Chasse --------------> 18 novembre 17h, chasse à Acton-Vale, organisé par<a href="#" id="chasse">  Gilles</a></p>
-				<p>- Cours de guitare</p>
-			</section>
 		</div>
 		
 		<section id="aPropos">
-			<p><div id="aProposStrong">À propos d'Alice: </div></br>Alice va écrire du texte intéressant sur elle.</br></br></p>
+			<p><div id="aProposStrong">À propos de Jerome: </div></br>Chef du projet Livathing du Start-up Week-end de Sherbrooke.</br></br></p>
 		</section>
 		
 		<aside id="publicite">

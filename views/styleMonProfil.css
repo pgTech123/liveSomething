@@ -1,6 +1,6 @@
 body{
 	background:url(home_page_background.jpg);
-	background-repeat: no-repeat;
+	background-repeat: repeat-y;
 	background-size: 100%;
 	
 	font-family: "Microsoft Tai Le",Helvetica,Arial,sans-serif;
@@ -8,6 +8,9 @@ body{
 
 #logo img{
 	margin-left: 70px;
+	max-height: 150px;
+	
+	max-width: 150px;
 	max-height: 150px;
 }
 
@@ -77,8 +80,8 @@ body{
 }
 
 .bouton_agenda {
-	margin-bottom: 15px;
-	margin-top: 20px;
+	margin-bottom: 5px;
+	margin-top: 10px;
 
 	position:relative;
 	right:25px;
@@ -129,8 +132,8 @@ body{
 }
 
 .bouton_proposerActivite {
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-top: 5px;
+	margin-bottom: 10px;
 
 	position:relative;
 	right:25px;
@@ -180,14 +183,62 @@ body{
 	top:1px;
 }
 
-#pitonConnection:hover{
-	background:url('img/point_connecter.png');
+.bouton_parametres{
+	margin-top: 5px;
+	margin-bottom: 10px;
+
+	position:relative;
+	right:25px;
+	
+	-moz-box-shadow:inset 0px 1px 0px 0px #999999;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #999999;
+	box-shadow:inset 0px 1px 0px 0px #999999;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff8808), color-stop(1, #f0b17a) );
+	background:-moz-linear-gradient( center top, #ff8808 5%, #f0b17a 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8808', endColorstr='#f0b17a');
+	background-color:#ff8808;
+	-webkit-border-top-left-radius:6px;
+	-moz-border-radius-topleft:6px;
+	border-top-left-radius:6px;
+	-webkit-border-top-right-radius:6px;
+	-moz-border-radius-topright:6px;
+	border-top-right-radius:6px;
+	-webkit-border-bottom-right-radius:6px;
+	-moz-border-radius-bottomright:6px;
+	border-bottom-right-radius:6px;
+	-webkit-border-bottom-left-radius:6px;
+	-moz-border-radius-bottomleft:6px;
+	border-bottom-left-radius:6px;
+	text-indent:0;
+	border:1px solid #808080;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:30px;
+	line-height:30px;
+	width: 230px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #141214;
+}
+.bouton_parametres:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f0b17a), color-stop(1, #ff8808) );
+	background:-moz-linear-gradient( center top, #f0b17a 5%, #ff8808 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0b17a', endColorstr='#ff8808');
+	background-color:#f0b17a;
+}
+.bouton_parametres:active {
+	position:relative;
+	top:1px;
 }
 
 
 #bloc_interets{
 	padding: 20px;
-	height: 400px;
+	height: 445px;
 
 	margin-left: 325px;
 	margin-right: 200px;
@@ -204,9 +255,37 @@ body{
 	font-size: 22px;
 }
 
+#ajouterInterets{
+	padding-left: 240px;
+}
+
+#bloc_interets a{
+	position:relative;
+	top:-25px;
+	color: white;
+	text-decoration: none;
+}
+
+#bloc_interets a:hover{
+	text-decoration: underline;
+}
+
+#bloc_interets a,img{
+	max-width: 16px;
+	max-height: 16px;
+}
+
+#titresCategories{
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+
+#descriptionInterets{
+	
+}
 
 #menuInterets, a{
-margin: 25px;
+	margin: 25px;	
 }
 
 #menuInterets img{
@@ -220,32 +299,18 @@ margin: 25px;
 }
 
 td{
-	padding:5px;
+	padding-bottom:15px;
+	padding:10px;
 }
-
-#interetsCommuns{
-	margin-top: 20px;
-	
-	border-top:solid;
-	border-color:orange;
-	border-width: 1px;
-}
-#interetsCommuns h2{
-	font-size: 20px;
-	color: white;
-	text-align:center;
-}
-#interetsCommuns p{
-	font-size: 15px;
-	color: white;
-}
-
 
 
 #aPropos{
 	margin-top: 20px;
 	margin-left: 70px;
-	width: 1005px;
+	
+	padding-left:20px;
+	
+	width: 955px;
 	
 	border: solid;
 	border-radius: 5px;
