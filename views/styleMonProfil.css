@@ -270,6 +270,10 @@ body{
 	text-decoration: underline;
 }
 
+#titresCategories{
+	font-weight: bold;
+}
+
 #bloc_interets a,img{
 	max-width: 16px;
 	max-height: 16px;
@@ -308,9 +312,10 @@ td{
 	margin-top: 20px;
 	margin-left: 70px;
 	
+	margin-right: 198px;	
 	padding-left:20px;
-	
-	width: 955px;
+	position:relative;	
+
 	
 	border: solid;
 	border-radius: 5px;
@@ -321,6 +326,7 @@ td{
 }
 
 #aProposStrong{
+    padding-left: 240px;
 	font-weight:bold;
 }
 

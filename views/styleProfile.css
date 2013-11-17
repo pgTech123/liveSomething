@@ -1,6 +1,6 @@
 body{
 	background:url(home_page_background.jpg);
-	background-repeat: no-repeat;
+	background-repeat: repeat-y;
 	background-size: 100%;
 	
 	font-family: "Microsoft Tai Le",Helvetica,Arial,sans-serif;
@@ -18,6 +18,7 @@ body{
 	margin-right: 200px;
 	text-align: center;
 	color: white;
+	font-size:30px;
 }
 #page{
 	position: relative;
@@ -214,6 +215,11 @@ margin: 25px;
 	max-height:50px;
 }
 
+#titresCategories{
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+
 #descriptionInterets{
 	color: white;
 	text-align: center;
@@ -239,13 +245,19 @@ td{
 	font-size: 15px;
 	color: white;
 }
+#interetsCommuns a{
+	margin:0px;
+}
+#fleche{
+	max-width: 40px;
+}
 
 
 
 #aPropos{
 	margin-top: 20px;
 	margin-left: 70px;
-	width: 1005px;
+	margin-right:200px;
 	
 	border: solid;
 	border-radius: 5px;
