@@ -11,7 +11,7 @@ function searchEvent(keyword, lat, longi) {
 		    var json_array = $.parseJSON(data);
 			var content = Mustache.to_html(template, json_array); 	
 	  	}
-		$('#resultats').html(data + content);
+		$('#resultats').html( content);
         $('#events').css("display", "block");
 	  });
 
