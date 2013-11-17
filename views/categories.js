@@ -2,16 +2,11 @@
 
 function loadCategories() {
 
-	$.ajax( "../controllers/seeCategories.php" ).done(function(data) {
+	$.ajax( "../controllers/seeCategories.php" ).done(function(datas) {
 
-    	    var template = "{{#categories}}{{.}}.jpg<br />{{/categories}}"; 
-    	    data = data.replace('[', ''); 
-    	    data = data.replace(']', '');
-    	    var datas = {categories: data.split(',')}; 
-    	    console.log(datas);
-    		var content = Mustache.to_html(template, datas);
-    		console.log(content);
-    		$('#categorie').html(content);
+    	    var template = $('#catTempl').html(); 
+    		var content = Mustache.to_html(template, datas); 
+    		$('#categorie').html('Content:' + content + " <br > " + datas);
 
   	}).fail(function() {
     	//alert( "error" );

@@ -8,10 +8,26 @@
     <script src="mustache.js"></script>
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script src="categories.js"></script>
-    <script src="geolocation.js"></script>
+    <script src="geolocation.js"></script> 
+    <script src="events.js"></script> 
 
  
+    <script type="text/template" id="catTempl">
+        {{#categorie}}
+            {{.}}.jpg<br />
+        {{/categorie}}
+    </script>
 
+
+    <script type="text/template" id="evtTempl">
+        {{#event}}
+            <p class="event">
+            {{name}} <br />
+            <b>A</b> {{location}}<br />
+            <b>Y participeront</b> {{attendees}}<br />
+            </p>
+        {{/event}} 
+    </script>
 
 
     <script type="text/javascript">
@@ -62,14 +78,14 @@
             $('#activity').on('keyup', function(e) {
                 if (e.which == 13) {
                     e.preventDefault();
-                    searchEvent(keyword, lat, long);
-                    alert('Evenements de ' + $('#datepicker').val() + ' -- ' + $('#ou').val() + ' -- ' + $('#activity').val());
+                    var keyword = $('#activity').val();
+                    searchEvent(keyword, lat, long); 
                 }
             });
 
     		$('#go').on('click', function() {
-                searchEvent(keyword, lat, long);
-    			alert('Evenements de ' + $('#datepicker').val() + ' -- ' + $('#ou').val() + ' -- ' + $('#activity').val());
+                var keyword = $('#activity').val();
+                searchEvent(keyword, lat, long); 
     		});
     		
     	});
@@ -95,20 +111,25 @@
                 <input type="submit" id="go" class="gobutton" value="On y va !"/>
     		</div>
     		
-    		<div id="resultats">
-    		
-    		</div>
 
+            <div id="events" style="display:none">
+            <hr />
+                <h1>Evénements à proximité</h1>
+        		<div id="resultats">
+        		      
+        		</div>
+            </div>
 
-            <!-- -->
+            <hr />
+            <!-- Catégories populaires -->
             <h1>Catégories populaires</h1>
     		<div id="categories"> 
     		    	<img class="categorie" src="./img/culture.jpg" /> 
     		    	<img class="categorie" src="./img/educatif.jpg" /> 
-                    <img class="categorie" src="./img/plein-air.png" /> 
-                    <img class="categorie" src="./img/Restauration.png" /> 
-                    <img class="categorie" src="./img/sociales.jpg" /> 
-                    <img class="categorie" src="./img/sports.png" /> 
+                    <img class="categorie" src="./img/plein-air.jpg" /> 
+                    <img class="categorie" src="./img/restauration.jpg" /> 
+                    <img class="categorie" src="./img/social.jpg" /> 
+                    <img class="categorie" src="./img/sport.jpg" /> 
     		</div>
     	</div>
 

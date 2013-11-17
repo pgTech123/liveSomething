@@ -19,6 +19,7 @@ a {
 
 #buttons input[type=text], input[type=date] {
 	padding: 1em;
+	margin-right:1em;
 	height: 20px;
 }
 
@@ -180,7 +181,14 @@ h1 {
 	color: #115E4D;
 }
 
+hr {
+	border: 1px solid #FF9900;
+}
 
 .icon {
 	font-size:22px;
+}
+
+.event {
+	
 }
