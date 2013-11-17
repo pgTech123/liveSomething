@@ -1,8 +1,8 @@
 <?
 
 	require '../models/categories.php';
-	$user = $_GET['user']; 
+	$location = $_GET['loc']; 
 	
-	echo json_encode(getActivities($user));
+	echo json_encode(getActivities($location));
 
 ?>

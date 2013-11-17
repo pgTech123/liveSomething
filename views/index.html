@@ -10,12 +10,7 @@
     <script src="categories.js"></script>
     <script src="geolocation.js"></script>
 
-
-    <script id="catTpl" type="text/template">
-	    {{#categorie}}  
-	    	<img class="categorie" src="./img/{{.}}.jpg" /> 
-		{{/categorie}}
-    </script>
+ 
 
 
 
@@ -30,7 +25,13 @@
 			  error('not supported');
 			}
 
-			 $( "#datepicker" ).datepicker();
+            $('#datepicker').on('click', function() {
+                $( "#datepicker" ).datepicker();
+            });
+
+             $('.exactivity').on('click', function() {
+                $('#activity').val($(this).html());
+             });
 
     		$('#activity').css('color', 'grey');
     		$('#activity').on('blur', function() {
@@ -50,14 +51,24 @@
 
     		$('#activity').on('click', function() {
     			$('#activity').css('color', 'black');
-    			$('#activity').val('');
+                if ( $('#activity').val('') == "J'ai envie de ..." )
+    			     $('#activity').val('');
     		});
     		
     		$('#login').on('click', function() {
     			alert('soon');
     		});
     		
+            $('#activity').on('keyup', function(e) {
+                if (e.which == 13) {
+                    e.preventDefault();
+                    searchEvent(keyword, lat, long);
+                    alert('Evenements de ' + $('#datepicker').val() + ' -- ' + $('#ou').val() + ' -- ' + $('#activity').val());
+                }
+            });
+
     		$('#go').on('click', function() {
+                searchEvent(keyword, lat, long);
     			alert('Evenements de ' + $('#datepicker').val() + ' -- ' + $('#ou').val() + ' -- ' + $('#activity').val());
     		});
     		
@@ -65,41 +76,47 @@
     </script>  
 
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-
+    <link rel="stylesheet" type="text/css" href="http://static.raff.ca/pictos/pictos.css">
     <link rel="stylesheet" type="text/css" href="style.css" /> 
   </head>
 
   <body>
-	
-	<!-- Cartouche de navigation -->
-	<nav id="log-panel">   
-	</nav>
+      <div id="logo">
+    	<!-- Input de recherche-->
+    	<div id="content"> 
+    		<div id="buttons">
+    			<input type="text" id="activity" class="txtinput" size="50" value="J'ai envie de ..."/> <br />
+                <u>Exemple</u>: <a href="#" class="exactivity" >Magasiner</a>, <a href="#" class="exactivity">chasser</a> ...<br />
+                <!-- <input id="datepicker" class="txtinput" type="text" style="color:gray" value="Quand?" />  --> <br />
+                <!-- <span id="datepicker" class="icon" style="text-align: right" >\</span> <br />-->
+    			 <span class="icon">@</span> <span id="location"></span> - <a href="#" id="editlocation" style="text-decoration:none">Edit</a><br />
+    		</div> 
+    		<div style="clear: both;">
+                <input type="submit" id="go" class="gobutton" value="On y va !"/>
+    		</div>
+    		
+    		<div id="resultats">
+    		
+    		</div>
 
-	<!-- Input de recherche-->
-	<div id="content">
-		<h1>J'ai envie de ?</h1><br />
-		<div id="buttons">
-			<input type="text" id="activity" class="txtinput" value="Ex: Chasser, magasiner ..."/> <input id="datepicker" class="txtinput" type="text" style="color:gray" value="Quand?" /> <br />
-			<span id="location"></span> <input type="submit" id="ou" value="Changer de localisation?"/> <br />
-			<input type="submit" id="go" value="On y va !"/>
-		</div>
-		
-		
-		
-		<div id="resultats">
-		
-		</div>
 
-		<div id="categories"> 
-		    	<img class="categorie" src="http://lorempixum.com/200/150" /> 
-		    	<img class="categorie" src="http://lorempixum.com/200/150" /> 
-		</div>
-	</div>
+            <!-- -->
+            <h1>Catégories populaires</h1>
+    		<div id="categories"> 
+    		    	<img class="categorie" src="./img/culture.jpg" /> 
+    		    	<img class="categorie" src="./img/educatif.jpg" /> 
+                    <img class="categorie" src="./img/plein-air.png" /> 
+                    <img class="categorie" src="./img/Restauration.png" /> 
+                    <img class="categorie" src="./img/sociales.jpg" /> 
+                    <img class="categorie" src="./img/sports.png" /> 
+    		</div>
+    	</div>
 
-	<!-- Mentions légales -->
-	<div id="mentionslegales">
-		( c ) - Livathing '13
-	</div>
+    	<!-- Mentions légales -->
+    	<div id="mentionslegales">
+    		( c ) - Livathing '13
+    	</div>
+      </div>
   </body>
 
 </html>

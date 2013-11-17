@@ -4,13 +4,16 @@ function loadCategories() {
 
 	$.ajax( "../controllers/seeCategories.php" ).done(function(data) {
 
-    	    var template = $('#catTpl').html();
-    	    var datas = {categorie: data};
-    	    alert(JSON.stringify(datas));
-    		var html = Mustache.to_html(template, datas);
-    		$('#categorie').html("Résultat: " + html);
+    	    var template = "{{#categories}}{{.}}.jpg<br />{{/categories}}"; 
+    	    data = data.replace('[', ''); 
+    	    data = data.replace(']', '');
+    	    var datas = {categories: data.split(',')}; 
+    	    console.log(datas);
+    		var content = Mustache.to_html(template, datas);
+    		console.log(content);
+    		$('#categorie').html(content);
 
   	}).fail(function() {
-    	alert( "error" );
+    	//alert( "error" );
   	});
 }

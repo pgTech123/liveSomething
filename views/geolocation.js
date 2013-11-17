@@ -2,8 +2,13 @@
 	/**
 	*  Get a string address from coordinates
 	*/
+	var lat, lng;
+
   function success(position) {
 	  geocoder = new google.maps.Geocoder();
+	  lat = position.coords.latitude; 
+	  long = position.coords.longitude;
+	  
 	  var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
 	  // Reverse Geocoding of the address
