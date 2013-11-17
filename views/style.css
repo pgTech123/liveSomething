@@ -52,12 +52,11 @@ a {
 }
 
 #categories {
-	width: 90%;
+	width: 70%;
 	margin: 0 auto;
 }
 
-.categorie {
-	margin-left: 5em;
+.categorie { 
 	border:5px solid white;
 	/*height:150px;
 	width:250px;*/
@@ -181,24 +180,30 @@ top:1px;
 
 h1 {
 	color: #115E4D;
-}
-
-hr {
-	border: 1px solid #FF9900;
-}
+} 
 
 .icon {
 	font-size:22px;
 }
 
-.event {
-	background-color: white;
-	width: 30%;
-	border-radius: 13px;
-border:1px solid #dcdcdc;
+#events {
+	border-bottom: 1px solid #FF9900;
+	padding-bottom: 2em;
+	min-height: 250px;
 }
 
-#infos {
+.event {
+	background-color: #86E8D2;
+	width: 25%;
+	border-radius: 13px;
+	border:1px solid #dcdcdc;
+	float:right;
+	margin-right: 2em;
+	color: black;
+	padding:1em;
+}
+
+#infos {  
     background-color: #61C6B0;
     border: 1px solid #DCDCDC;
     border-radius: 13px;

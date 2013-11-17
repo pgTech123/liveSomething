@@ -5,7 +5,7 @@
 	 */
 	function getActivities($loc) {
 		return array( "categorie" => array(
-						array('name'=> 'sports'),
+						array('name'=> 'sport'),
 						array('name' => 'social'),
 						array('name' => 'restauration'),
 						array('name' => 'plein-air'),

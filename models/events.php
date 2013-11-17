@@ -1,18 +1,18 @@
 <?
 
 	function searchEvents($keyword, $lat, $long) {
-		if ( strtolower($keyword) == 'chasse' ) {
+		if ( strtolower($keyword) == 'chasser' ) {
 			return array( "event" => array(
-						array('name'=> 'Chasse a cour', 'location' => 'Mont Bellevue', 'attendees' => 'Laila'),
-						array('name' => 'Randonnee en foret', 'location' => 'Mont Sutto', 'attendees' => 'Laila, Jean'),
-						array('name' => 'Chasse a l orignal', 'location' => 'Mont Orford', 'attendees' => 'Gilles')
+						array('name'=> 'Chasse a cour', 'location' => 'Mont Bellevue (0.3 miles)', 'attendees' => 'Laila'),
+						array('name' => 'Randonnée', 'location' => 'Mont Orford (30 miles)', 'attendees' => 'Laila, Jean'),
+						array('name' => 'Chasse à l orignal', 'location' => 'Acton Vale (40 miles)', 'attendees' => 'Gilles')
 					));
 		}
 		else {
 			return array( "event" => array( 
-					array('name' => 'Magasinage pour Noel', 'location' => 'Montreal', 'attendees' => 'Henri'),
-					array('name' => 'Destockage de vetements d hiver', 'location' => 'Sears - Carrefour de l Estrie', 'attendees' => 'Laila'),
-					array('name' => 'Destockage pour tenues de soiree', 'location' => 'Simons', 'attendees' => 'Laila')
+					array('name' => 'Magasinage pour Noel', 'location' => 'Centre Wellington', 'attendees' => 'Henri'),
+					array('name' => 'Soldes de vetements d hiver', 'location' => 'Sears - Carrefour de l Estrie', 'attendees' => 'Laila'),
+					array('name' => 'Soldes de tenues de soirée', 'location' => 'Simons - Carrefour de l Estrie', 'attendees' => 'Laila')
 					));
 		}
 

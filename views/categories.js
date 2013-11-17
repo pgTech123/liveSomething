@@ -6,7 +6,7 @@ function loadCategories() {
 			var json_array = $.parseJSON(datas);
     	    var template = $('#catTempl').html(); 
     		var content = Mustache.to_html(template, json_array); 
-    		$('#categories').html('Content:' + content + " <br > " + datas);
+    		$('#categories').html( content );
 
   	}).fail(function() {
     	//alert( "error" );

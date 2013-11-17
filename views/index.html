@@ -14,7 +14,7 @@
  
     <script type="text/template" id="catTempl">
         {{#categorie}}
-            <img src="./img/{{name}}.jpg" class="categorie" />
+            <img src="./img/{{name}}.png" class="categorie" keyword="{{name}}"/>
         {{/categorie}}
     </script>
 
@@ -22,9 +22,10 @@
     <script type="text/template" id="evtTempl">
         {{#event}}
             <p class="event">
-            {{name}} <br />
-            <b>A</b> {{location}}<br />
-            <b>Y participeront</b> {{attendees}}<br />
+            <b><span class="icon" style="text-shadow: 1px 2px black; color:white;">z</span></b> {{name}} <br />
+            <b><span class="icon" style="color: #FF7C71">@</span></b> {{location}}<br />
+            <b><span class="icon" style="">U</span></b> {{attendees}}<br />
+            <b><span class="icon" style="color: #C41F1F">\</span></b> Le 17 novembre à 17h00<br />
             </p>
         {{/event}} 
     </script>
@@ -52,28 +53,25 @@
     		$('#activity').css('color', 'grey');
     		$('#activity').on('blur', function() {
     			if ( $('#activity').val() == "" ) {
-    				$('#activity').val('Chasser, magasiner ...');
+    				$('#activity').val("J'ai envie de ...");
     				$('#activity').css('color', 'grey');
     			}
     		});
 
 			// Categories
 			loadCategories();
-			
-    		// Attachement des événements aux boutons
-    		$('#signup').on('click', function() { 
-    			alert('soon'); 
-    		});
-
+			 
     		$('#activity').on('click', function() {
     			$('#activity').css('color', 'black');
                 if ( $('#activity').val('') == "J'ai envie de ..." )
     			     $('#activity').val('');
     		});
-    		
-    		$('#login').on('click', function() {
-    			alert('soon');
-    		});
+
+            $('.categorie').on('click', function() {
+                console.log('click sur ' + $('this').attr('keyword'));
+                searchEvent($('this').attr('keyword'), lat, long)
+            })
+    		 
     		
             $('#activity').on('keyup', function(e) {
                 if (e.which == 13) {
@@ -100,7 +98,8 @@
       <div id="logo">
     	<!-- Input de recherche-->
         <div id="infos">
-            Salut SWS ! 
+            Salut SWS ! <br />
+            <a href="#">Quitter ?</a>
         </div>
     	<div id="content"> 
     		<div id="buttons">
@@ -110,32 +109,25 @@
                 <!-- <span id="datepicker" class="icon" style="text-align: right" >\</span> <br />-->
     			 <span class="icon">@</span> <span id="location"></span> - <a href="#" id="editlocation" style="text-decoration:none">Edit</a><br />
     		</div> 
-    		<div style="clear: both;">
+    		<div>
                 <input type="submit" id="go" class="gobutton" value="On y va !"/>
     		</div>
     		
 
-            <div id="events" style="display:none">
-            <hr />
+            <div id="events" style="display:none"> 
                 <h1>Evénements à proximité</h1>
         		<div id="resultats">
         		      
         		</div>
             </div>
-
-            <hr />
+ 
             <!-- Catégories populaires -->
-            <h1>Catégories populaires</h1>
-    		<div id="categories"> 
-                
-    		    	<img class="categorie" src="./img/culture.png" /> 
-    		    	<img class="categorie" src="./img/education.png" /> 
-                    <img class="categorie" src="./img/plein-air.png" /> 
-                    <img class="categorie" src="./img/restauration.png" /> 
-                    <img class="categorie" src="./img/social.png" /> 
-                    <img class="categorie" src="./img/sport.png" /> 
-                
-    		</div>
+            <div id="catcontenant">
+                <h1>Catégories populaires</h1>
+        		<div id="categories"> 
+                    
+        		</div>
+            </div>
     	</div>
 
     	<!-- Mentions légales -->
