@@ -67,11 +67,6 @@
     			     $('#activity').val('');
     		});
 
-            $('.categorie').on('click', function() {
-                console.log('click sur ' + $('this').attr('keyword'));
-                searchEvent($('this').attr('keyword'), lat, long)
-            })
-    		 
     		
             $('#activity').on('keyup', function(e) {
                 if (e.which == 13) {
@@ -104,7 +99,7 @@
     	<div id="content"> 
     		<div id="buttons">
     			<input type="text" id="activity" class="txtinput" size="50" value="J'ai envie de ..."/> <br />
-                <u>Exemple</u>: <a href="#" class="exactivity" >Magasiner</a>, <a href="#" class="exactivity">chasser</a> ...<br />
+                <u>Exemple</u>: <a href="#" class="exactivity" >Magasiner</a>, <a href="#" class="exactivity">partir à l'aventure</a> ...<br />
                 <!-- <input id="datepicker" class="txtinput" type="text" style="color:gray" value="Quand?" />  --> <br />
                 <!-- <span id="datepicker" class="icon" style="text-align: right" >\</span> <br />-->
     			 <span class="icon">@</span> <span id="location"></span> - <a href="#" id="editlocation" style="text-decoration:none">Edit</a><br />

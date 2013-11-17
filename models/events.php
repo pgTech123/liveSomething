@@ -1,7 +1,7 @@
 <?
 
 	function searchEvents($keyword, $lat, $long) {
-		if ( strtolower($keyword) == 'chasser' ) {
+		if ( strpos($keyword, "aventure") !== FALSE  ) {
 			return array( "event" => array(
 						array('name'=> 'Chasse a cour', 'location' => 'Mont Bellevue (0.3 miles)', 'attendees' => 'Laila'),
 						array('name' => 'Randonnée', 'location' => 'Mont Orford (30 miles)', 'attendees' => 'Laila, Jean'),

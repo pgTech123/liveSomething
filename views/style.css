@@ -62,7 +62,9 @@ a {
 	width:250px;*/
 }
 
-
+.categorie:hover {
+	background-color:pink;
+}
 
 #mentionslegales {
 	position: fixed;
