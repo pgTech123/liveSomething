@@ -5,33 +5,20 @@
     <meta charset="utf-8" /> 
 	
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<SCRIPT LANGUAGE="JavaScript" type="text/javascript" src="profileJS.js"></SCRIPT>
+	
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript">
 
     	$(document).on("ready", function() {
 	    		// Attachement des événements aux boutons
-    		$('#sports').on('click', function() { 
-    			
+    		$('#signup').on('click', function() { 
+    			alert('soon'); 
     		});
     		
-    		$('#restauration').on('click', function() {
-    			alert('soon1');
-    		});
-			
-			$('#culture').on('click', function() {
-    			alert('soon2');
-    		});
-			
-			$('#pleinair').on('click', function() {
-    			alert('soon3');
-    		});
-			
-			$('#educatif').on('click', function() {
-    			alert('soon4');
-    		});
-			
-			$('#social').on('click', function() {
-    			alert('soon5');
+    		$('#login').on('click', function() {
+    			alert('soon');
     		});
     		
     	});
@@ -42,66 +29,101 @@
   
   <body>
 	<header id="logo">
-		<img src="img/logo.png" alt="Logo Livathing"/>
+		<a href="http://www.livathing.com/views"><img src="img/logo.png" alt="Logo Livathing"/></a>
+		<h1 id="pensee">« Quelqu'un pour une soirée ciné? »</h1>
 	</header>
-  
-	<section id="pensee">
-		<h1>« Quelqu'un pour une soirée ciné? »</h1>
-	</section>	
-	
-	<section id="sideGauche">
-		<div id="infoProfile">
-			
-			<div id="photo">
-				<img src="img/photoProfile1.jpg" alt="Photo de profile"/>
-			</div>
-			
-			<div id="boutonFavori">
-			<a href="#" class="bouton_favori"><img src="img/favorite.png" alt="favoris"/></a>
-			</div>
-			
-			<div id="nom">
-				<h2><img src="img/point_connecter.png"  id="pitonConnection" alt="Photo de profile"/>Alicia Beauregard</h2>
-			</div>
-	
-			
-		</div>
-		
-		<div id="boutonAgenda">
-				<a href="#" class="bouton_agenda">Inviter</a>
-		</div>
-	
-		<div id="proposerActivite">
-			<a href="#" class="bouton_proposerActivite">Discutter </a>
-		</div>
-		
-	</section>
-	
-		
-	<div id="bloc_interets">
 
-		<h3>Intérêts de Alicia Beauregard</h3>
+	<div id="page">
+		<section id="sideGauche">
+			<div id="infoProfile">
+			
+				<div id="boutonFavori">
+				<a href="#" class="bouton_favori"><img src="img/favorite.png" alt="favoris"/></a>
+				</div>
+				
+				<div id="photo">
+					<img src="img/photoProfile1.jpg" alt="Photo de profile"/>
+				</div>
+				
+				
+				
+				<div id="nom">
+					<h2><img src="img/point_connecter.png"  id="pitonConnection" alt="Photo de profile"/>Alicia Beauregard</h2>
+					<h3>Sherbrooke</br>25 ans</h3>
+				</div>
 		
-		<nav id = "menuInterets">
-			<a href="#" id="sports"><img src="img/sport.png" alt="Sport"/></a>
-			<a href="#" id="restauration"><img src="img/gateau.png" alt="Restauration"/></a>
-			<a href="#" id="culture"><img src="img/guit.png" alt="Culture"/></a>
-			<a href="#" id="pleinair"><img src="img/dehors.png" alt="Plein air"/></a>
-			<a href="#" id="educatif"><img src="img/bebe.png" alt="Educatif"/></a>
-			<a href="#" id="social"><img src="img/peuple.png" alt="Social"/></a>
-		</nav>
+				
+			</div>
+			
+			<div id="boutonAgenda">
+					<a href="#" class="bouton_agenda">Inviter</a>
+			</div>
 		
-		<section id="descriptionInterets">
+			<div id="proposerActivite">
+				<a href="#" class="bouton_proposerActivite">Discuter </a>
+			</div>
+			
+		</section>
 		
-		</section>	
+			
+		<div id="bloc_interets">
+
+			<h3>Intérêts de Alicia Beauregard</h3>
+			
+			<section id="descriptionInterets">
+				<table> 
+					<tr id = "menuInterets">
+						<td><a href="#" id="sports"><img src="img/ballon.png" alt="Sports" onClick="addSports();"/></a></td>
+						<td><a href="#" id="restauration"><img src="img/restaurant_food.png" alt="Restauration"/></a></td>
+						<td><a href="#" id="culture"><img src="img/socialLogo.png" alt="Culture"/></a></td>
+						<td><a href="#" id="pleinair"><img src="img/dehors.png" alt="Plein air"/></a></td>
+						<td><a href="#" id="educatif"><img src="img/book.png" alt="Educatif"/></a></td>
+						<td><a href="#" id="social"><img src="img/peuple.png" alt="Social"/></a></td>
+					</tr>
+					
+					<tr>
+						<td>Soccer</td>
+						<td>Da Toni</td>
+						<td>Cinéma</td>
+						<td>Randonnée</td>
+						<td>Cours de guitare</td>
+						<td>PaintBall</td>
+					</tr>
+					
+					<tr>
+						<td>Escalade</td>
+						<td>Bâton Rouge</td>
+						<td>Musée</td>
+						<td></td>
+						<td></td>
+						<td>Karting</td>
+					</tr>
+					
+					<tr>
+						<td></td>
+						<td></td>
+						<td>Théâtre</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			</section>	
+			
+			<section id="interetsCommuns">
+				<h2>Intérêts communs</h2>
+				<p>- Randonnée </p>
+				<p>-Cours de guitare</p>
+			</section>
+		</div>
+		
+		<section id="aPropos">
+			<p><div id="aProposStrong">À propos d'Alice: </div></br>Alice va écrire du texte intéressant sur elle.</br></br></p>
+		</section>
+		
+		<aside id="publicite">
+		</aside>
+	
 	</div>
-	
-	<section id="aPropos">
-		<p><div id="aProposStrong">À propos d'Alice: </div></br>Alice va écrire du texte intéressant sur elle.</br></br></p>
-	</section>
-	
-	<section id="publicite">
-	</section>
-	
   
   </body>

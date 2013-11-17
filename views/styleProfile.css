@@ -1,6 +1,4 @@
 body{
-	margin: auto;
-
 	background:url(home_page_background.jpg);
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -11,23 +9,22 @@ body{
 #logo img{
 	margin-left: 70px;
 	max-height: 150px;
-	
-	position: relative;
-	bottom: -70px;
 }
 
 #pensee{
 	position: relative;
-	top: -20px;
+	top: -100px;
 	margin-left: 325px;
 	margin-right: 200px;
 	text-align: center;
 	color: white;
 }
-
+#page{
+	position: relative;
+	top: -100px;
+}
 #sideGauche{
 	float: left;
-	top:0px;
 	width: 230px;
 	margin-left: 70px;
 }
@@ -59,8 +56,9 @@ body{
 }
 
 #boutonFavori{
+	float:right;
 	position:relative;
-	top:20;
+	top: 15px;
 }
 
 #boutonFavori img{
@@ -72,12 +70,19 @@ body{
 	text-align: center;
 	font-size: 14px;
 }
-
+#nom h3{
+	padding-right: 20px;
+	text-align: right;
+	font-size: 14px;
+}
 
 .bouton_agenda {
 	margin-bottom: 15px;
-	margin-top: 30px;
+	margin-top: 20px;
 
+	position:relative;
+	right:25px;
+	
 	-moz-box-shadow:inset 0px 1px 0px 0px #999999;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #999999;
 	box-shadow:inset 0px 1px 0px 0px #999999;
@@ -124,8 +129,12 @@ body{
 }
 
 .bouton_proposerActivite {
+	margin-top: 15px;
 	margin-bottom: 15px;
 
+	position:relative;
+	right:25px;
+	
 	-moz-box-shadow:inset 0px 1px 0px 0px #999999;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #999999;
 	box-shadow:inset 0px 1px 0px 0px #999999;
@@ -197,7 +206,7 @@ body{
 
 
 #menuInterets, a{
-	display: table-row;
+margin: 25px;
 }
 
 #menuInterets img{
@@ -205,6 +214,29 @@ body{
 	max-height:50px;
 }
 
+#descriptionInterets{
+	color: white;
+	text-align: center;
+}
+
+td{
+	padding:5px;
+}
+
+#interetsCommuns{
+	border-top:dotted;
+	border-color:white;
+	border-width: 5px;
+}
+#interetsCommuns h2{
+	font-size: 20px;
+	color: white;
+	text-align:center;
+}
+#interetsCommuns p{
+	font-size: 15px;
+	color: white;
+}
 
 
 
