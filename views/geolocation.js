@@ -18,8 +18,7 @@
 	      	// Récupérer uniquement le nom de la ville
 	      	var city_name;
 	      	
-	      	for ( var i=0; i < results[1].address_components.length ; ++i)  {
-	      		console.log(results[1].address_components.length);
+	      	for ( var i=0; i < results[1].address_components.length ; ++i)  { 
 	      		if ( results[1].address_components[i].types.indexOf('locality') > -1 ) {
 	      			city_name = results[1].address_components[i].long_name;
 	      			break;

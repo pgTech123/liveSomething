@@ -14,7 +14,7 @@
  
     <script type="text/template" id="catTempl">
         {{#categorie}}
-            {{.}}.jpg<br />
+            <img src="./img/{{name}}.jpg" class="categorie" />
         {{/categorie}}
     </script>
 
@@ -57,7 +57,7 @@
     			}
     		});
 
-			// Catégories
+			// Categories
 			loadCategories();
 			
     		// Attachement des événements aux boutons
@@ -99,6 +99,9 @@
   <body>
       <div id="logo">
     	<!-- Input de recherche-->
+        <div id="infos">
+            Salut SWS ! 
+        </div>
     	<div id="content"> 
     		<div id="buttons">
     			<input type="text" id="activity" class="txtinput" size="50" value="J'ai envie de ..."/> <br />
@@ -124,12 +127,14 @@
             <!-- Catégories populaires -->
             <h1>Catégories populaires</h1>
     		<div id="categories"> 
-    		    	<img class="categorie" src="./img/culture.jpg" /> 
-    		    	<img class="categorie" src="./img/educatif.jpg" /> 
-                    <img class="categorie" src="./img/plein-air.jpg" /> 
-                    <img class="categorie" src="./img/restauration.jpg" /> 
-                    <img class="categorie" src="./img/social.jpg" /> 
-                    <img class="categorie" src="./img/sport.jpg" /> 
+                
+    		    	<img class="categorie" src="./img/culture.png" /> 
+    		    	<img class="categorie" src="./img/education.png" /> 
+                    <img class="categorie" src="./img/plein-air.png" /> 
+                    <img class="categorie" src="./img/restauration.png" /> 
+                    <img class="categorie" src="./img/social.png" /> 
+                    <img class="categorie" src="./img/sport.png" /> 
+                
     		</div>
     	</div>
 

@@ -2,11 +2,11 @@
 
 function loadCategories() {
 
-	$.ajax( "../controllers/seeCategories.php" ).done(function(datas) {
-
+	$.ajax( "../controllers/seeCategories.php" ).done(function(datas) { 
+			var json_array = $.parseJSON(datas);
     	    var template = $('#catTempl').html(); 
-    		var content = Mustache.to_html(template, datas); 
-    		$('#categorie').html('Content:' + content + " <br > " + datas);
+    		var content = Mustache.to_html(template, json_array); 
+    		$('#categories').html('Content:' + content + " <br > " + datas);
 
   	}).fail(function() {
     	//alert( "error" );

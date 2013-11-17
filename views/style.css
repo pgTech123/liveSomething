@@ -52,11 +52,13 @@ a {
 }
 
 #categories {
-	width: 100%;
+	width: 90%;
+	margin: 0 auto;
 }
 
 .categorie {
 	margin-left: 5em;
+	border:5px solid white;
 	/*height:150px;
 	width:250px;*/
 }
@@ -190,5 +192,18 @@ hr {
 }
 
 .event {
-	
+	background-color: white;
+	width: 30%;
+	border-radius: 13px;
+border:1px solid #dcdcdc;
+}
+
+#infos {
+    background-color: #61C6B0;
+    border: 1px solid #DCDCDC;
+    border-radius: 13px;
+    float: right;
+    padding: 2em;
+    text-align: right;
+    width: 6em;
 }

@@ -5,12 +5,10 @@ function searchEvent(keyword, lat, longi) {
 	  	if ( data.size == 0 ) {
 	  		content = "Il n'y a pas d'événements correspondant à " + kwd + " ... Pourquoi pas le créer ?";
 	  	}
-	  	else {
-		    alert( "Data Loaded: " + data );
+	  	else { 
 		    var template = $('#evtTempl').html(); 
-		    var json_array = { "event" : data }; 
-		    console.log(json_array);
-		    console.log(template);
+
+		    var json_array = $.parseJSON(data);
 			var content = Mustache.to_html(template, json_array); 	
 	  	}
 		$('#resultats').html(data + content);
